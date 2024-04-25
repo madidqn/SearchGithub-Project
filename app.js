@@ -11,6 +11,7 @@ form.addEventListener("submit", function (e) {
   } else {
     getData(inputValue);
   }
+  userInput.value = "";
 });
 
 async function getData(user) {
@@ -18,10 +19,9 @@ async function getData(user) {
   const res = await fetch(`https://api.github.com/search/users?q=${user}`);
   const data = await res.json();
   let arrayData = data.items;
-  console.log(arrayData);
   arrayData.forEach((user) => {
     list.innerHTML += `<div><img src='${user.avatar_url}'><li>${user.login}</li>
-                <a class='more'>More</a></div>`;
+                <a class='view'href='${user.html_url}'>VIEW PAGE</a></div>`;
   });
 }
 
