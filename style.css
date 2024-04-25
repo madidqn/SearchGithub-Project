@@ -50,3 +50,26 @@ input {
   color: black;
   font-size: 22px;
 }
+.submit {
+  text-align: center;
+  width: 60%;
+  height: 45px;
+  color: white;
+  font-size: 18px;
+  background-color: #333;
+  cursor: pointer;
+}
+.submit:hover {
+  background-color: black;
+}
+.clear {
+  text-align: center;
+  width: 60%;
+  height: 35px;
+  color: black;
+  font-size: 16px;
+  background-color: rgb(219, 217, 217);
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+}
